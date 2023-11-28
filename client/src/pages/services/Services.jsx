@@ -200,7 +200,7 @@ export function Services() {
             <span className="text-[#2DA2DD]">Dive </span>Deeper
           </div>
           <h2 className="text-xl  font-semibold text-[#1F2029] pt-1">
-            Discover the core of our services
+            Discover the core of our service
           </h2>
         </div>
 
