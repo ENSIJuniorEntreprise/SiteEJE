@@ -113,25 +113,29 @@ export function Services() {
         className=" h-[400px] w-[100%] flex items-center justify-center "
         style={divStyle}
       >
-        <div className="border-4 border-[#2DA2DD] w-[500px] flex justify-center items-center ">
+        <div className="border-4 border-[#2DA2DD] md:w-[40vw] flex justify-center items-center ">
           <div className="text-[#E0DED2] text-5xl font-semibold p-4  ">
             <span className="text-[#2DA2DD]">What </span> We do
           </div>
         </div>
       </div>
-      <div className="bg-[#E0DED2] rounded-br-[350px] pb-11">
+      {/*  done*/}
+
+      <div className="bg-[#E0DED2] lg:rounded-br-[300px]  sm:rounded-br-[250px] rounded-br-[150px] pb-11">
         <div className=" flex flex-col p-4  items-center ">
-          <div className="text-5xl  font-semibold text-[#1F2029]">
+          <div className="md:text-5xl text-4xl  font-semibold text-[#1F2029]">
             <span className="text-[#2DA2DD]">Our&nbsp;</span>Services
           </div>
-          <h2 className="text-xl font-extralight text-[#1F2029] pt-1">
+          {/* <h2 className="text-xl font-extralight text-[#1F2029] pt-1">
             Discover the core of our services
-          </h2>
+          </h2> */}
         </div>
+
+        {/* done */}
 
         <div className="border-t-2 border-black w-9/12"></div>
         {/* partie services */}
-        <div className="flex  justify-center gap-32">
+        <div className="lg:flex  justify-center gap-32">
           <ServiceComponent
             paragraphs={Services}
             onClickP={onClickP}
@@ -149,14 +153,14 @@ export function Services() {
                 }}
               >
                 <div className="pt-1 relative">
-                  <div className="bg-[#2DA2DD] w-[450px] h-60 absolute  right-[-20px]"></div>
+                  <div className="bg-[#2DA2DD] sm:w-[450px] w-72 h-60 absolute  sm:right-[-20px] right-[-10px] "></div>
                   <img
                     src={item.image}
                     alt="Banner"
-                    className="w-[450px] h-60 relative top-3"
+                    className="sm:w-[450px] w-72 h-60 relative top-3"
                   />
                 </div>
-                <div key={index} className="flex-col w-[500px]">
+                <div key={index} className="flex-col sm:w-[500px]">
                   <h2 className="pb-4 text-[#2DA2DD] font-bold ">
                     {item.title}
                   </h2>
@@ -176,11 +180,11 @@ export function Services() {
       <div className=" flex flex-col justify-center items-center ">
         {/* titre  */}
         <div className=" flex text-center justify-center mt-6">
-          <div className="text-5xl  font-semibold text-[#2DA2DD]">
+          <div className="sm:text-5xl text-4xl font-semibold text-[#2DA2DD]">
             Testimonials
           </div>
         </div>
-        <div className=" grid justify-center mt-20 gap-20 grid-cols-2 ">
+        <div className=" sm:grid justify-center mt-20 gap-20 sm:grid-cols-2 flex flex-col px-5">
           {testemonieParts.map((part, index) => (
             <Testemonie
               key={index}
@@ -193,7 +197,7 @@ export function Services() {
       </div>
 
       {/* partie contact */}
-      <div className="h-96 bg-[#E0DED2] rounded-tl-[350px] mt-36 pt-4">
+      <div className="bg-[#E0DED2] rounded-tl-[350px] mt-24 pt-4 pb-16">
         {/* titre */}
         <div className="flex flex-col items-center">
           <div className="text-5xl  font-semibold text-[#1F2029]">
@@ -214,7 +218,7 @@ export function Services() {
             />
             <DiveButton
               bgColor="bg-[#2DA2DD]"
-              title="Dive Deeper"
+              title="Work With Us"
               subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing"
             />
             <DownloadButton />
@@ -222,16 +226,6 @@ export function Services() {
           </div>
         </div>
       </div>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   );
 }

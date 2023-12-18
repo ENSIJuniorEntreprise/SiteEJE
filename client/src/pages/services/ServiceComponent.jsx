@@ -10,17 +10,6 @@ const ServiceComponent = ({
   onHoverOut,
   selectedParagraph,
 }) => {
-  const cardStyle = {
-    width: "350px",
-    height: "500px",
-    borderRadius: "7px",
-    display: "flex",
-    flexDirection: "column",
-    gap: "15px",
-    padding: ".4em",
-    marginTop: "2rem",
-  };
-
   const pStyle = {
     height: "100%",
     flex: "1",
@@ -48,7 +37,7 @@ const ServiceComponent = ({
   };
 
   return (
-    <div className="card" style={cardStyle}>
+    <div className="lg:w-[350px] sm:w-full sm:h-72 lg:h-[500px]  rounded-[7px] lg:flex  lg:flex-col sm:grid sm:grid-cols-2 flex flex-col h-96 mx-12 sm:mx-0 px-0 sm:px-12 lg:px-0 gap-4 mt-[2rem] p-[.4rem]">
       {paragraphs.map((paragraph, index) => (
         <p
           key={index}
