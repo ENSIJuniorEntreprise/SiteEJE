@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.post('/', articleController.addArticle);
 router.get('/', articleController.getAllArticles);
+router.get('/:substring', articleController.getArticlesBySubstring);
 router.put('/:id', articleController.updateArticleById);
 router.delete('/:id', articleController.deleteArticleById);
 

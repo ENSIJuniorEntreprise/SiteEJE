@@ -34,6 +34,28 @@ const getAllArticles = async (req, res) => {
     }
 };
 
+const getArticlesBySubstring = async (req, res) => {
+    try {
+        const substring = req.params.substring;
+
+        if (!substring) {
+            return res.status(400).json({ error: "Substring parameter is required." });
+        }
+
+        const articles = await Article.find({
+            $or: [
+                { title: { $regex: substring, $options: 'i' } },
+                { description: { $regex: substring, $options: 'i' } }
+            ]
+        });
+
+        res.json({ articles });
+    } catch (error) {
+        console.error("Error getting articles by substring:", error);
+        res.status(500).json({ error: "Internal server error." });
+    }
+};
+
 const deleteArticleById = async (req, res) => {
     const id = req.params.id;
     try {
@@ -80,6 +102,7 @@ const updateArticleById = async (req, res) => {
 module.exports = {
     addArticle,
     getAllArticles,
+    getArticlesBySubstring,
     deleteArticleById,
     updateArticleById,
 };
