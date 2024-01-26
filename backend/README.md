@@ -31,6 +31,10 @@ Create a .env file and set values
     * EMAIL= /* gmail address */
     * PASSWORD=/* google app password*/
 
+To get the google app password, follow the instructions provided in the following link:
+
+https://support.google.com/accounts/answer/185833?hl=en&sjid=6309740189120013856-EU
+
 # Running the Server
 ## Start the server using the following command:
 
