@@ -9,12 +9,10 @@ import { Services } from "./pages/services/Services";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Newsletter } from "./components/Newsletter";
-
 function App() {
   return (
     <div>
       <Navbar />
-
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,7 +24,6 @@ function App() {
           <Route path="*" element={<div>404 not found</div>} />
         </Routes>
       </Router>
-
       <Newsletter />
       <Footer />
     </div>
