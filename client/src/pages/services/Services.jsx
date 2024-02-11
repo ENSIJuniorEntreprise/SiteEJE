@@ -197,7 +197,7 @@ export function Services() {
       </div>
 
       {/* partie contact */}
-      <div className="bg-[#E0DED2] rounded-tl-[350px] mt-24 pt-4 pb-16">
+      <div className="bg-[#E0DED2] rounded-tl-[350px] mt-24 pt-10 pb-16">
         {/* titre */}
         <div className="flex flex-col items-center">
           <div className="text-5xl  font-semibold text-[#1F2029]">
@@ -210,7 +210,7 @@ export function Services() {
 
         {/* 2éme partie */}
         <div className=" flex justify-center items-center mt-12">
-          <div className="inline-grid grid-cols-2 gap-3 items-center text-center ">
+          <div className="inline-grid grid-cols-2 gap-x-5 gap-y-2 items-center text-center ">
             <DiveButton
               bgColor="bg-[#1F2029]"
               title="Our Portfolio"
