@@ -7,19 +7,12 @@ import { About } from "./pages/about us/About";
 import { Events } from "./pages/events/Events";
 import { Services } from "./pages/services/Services";
 
-import { Footer } from "./components/Footer";
-<<<<<<< HEAD
+import  Footer  from "./components/Footer";
 import  Newsletter from "./components/Newsletter";
 import Navbar from "./components/Navbar";
-=======
-import { Newsletter } from "./components/Newsletter";
-import { Article } from "./pages/news/Article/Article";
->>>>>>> 8ad14f6fe420244e95e306b71703ca5ce297c113
 
 function App() {
-
   return (
-    
     <div>
       <Navbar/>
 
@@ -32,8 +25,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/article" element={<Article />} />
-
           <Route path="*" element={<div>404 not found</div>} />
         </Routes>
       </Router>

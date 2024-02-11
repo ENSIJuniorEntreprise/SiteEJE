@@ -6,6 +6,10 @@ module.exports = {
     extend: {
       fontFamily:{
         'montserrat': ['Montserrat', 'sans-serif'],
+        'lato': ['Lato'],
+        'garamond': ['Garamond'],
+        'Photograph':['Photograoh Signature'],
+        'brush':['Brush Script MT']
       },
       screens: {
         'yxs': {'min': '300px', 'max': '500px'},
