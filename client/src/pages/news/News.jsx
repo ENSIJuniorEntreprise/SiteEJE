@@ -1,6 +1,5 @@
 import { RightArticle } from "./RightArticle";
-import { bannerImg, image } from "../../assets/file";
-
+import { bannerImg,image } from "../../assets/file";
 import Button from "./Button";
 import Search from "./Search";
 import FirstHighlight from "./FirstHighlight";

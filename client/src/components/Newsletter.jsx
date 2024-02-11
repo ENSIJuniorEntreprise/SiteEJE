@@ -6,7 +6,7 @@ function Newsletter() {
     <img src={equipe} alt="Background " class="w-full h-80 object-cover"/>
     <div class=" absolute inset-0 bg-[#2DA2DD] bg-opacity-50 p-20">
        <h1 class="text-[#1F2029] font-medium text-3xl md:text-4xl sm:text-2xl text-center">Subscribe to our Newsletter</h1>
-      <div className=" mb-2 flex flex-wrap   mt-8 inset-0 flex items-center justify-center ">
+      <div className=" mb-2 flex-wrap   mt-8 inset-0 flex items-center justify-center ">
         
                     <input
                         type="search"
