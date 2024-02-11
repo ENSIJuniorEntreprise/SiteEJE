@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import logo from "../assets/logo.png";
 
@@ -89,6 +90,10 @@ function Navbar() {
       </div>
     </nav>
   );
+=======
+export function Navbar() {
+  return <div className="text-3xl font-bold underline">Navbarr</div>;
+>>>>>>> 8e545fa75adbaeca6ccdb4d894fbd0071adc1336
 }
 
 export default Navbar;
