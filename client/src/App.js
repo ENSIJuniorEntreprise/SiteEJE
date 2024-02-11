@@ -8,7 +8,7 @@ import { Events } from "./pages/events/Events";
 import { Services } from "./pages/services/Services";
 
 import { Footer } from "./components/Footer";
-import { Newsletter } from "./components/Newsletter";
+import  Newsletter from "./components/Newsletter";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
         </Routes>
       </Router>
 
-      <Newsletter />
+      <Newsletter/>
       <Footer />
     </div>
   );
