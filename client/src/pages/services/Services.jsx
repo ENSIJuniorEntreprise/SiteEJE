@@ -39,7 +39,7 @@ export function Services() {
   };
 
   const data = [
-    {
+    { id:"1",
       title: "FEW WORDS ABOUT WEB DEVELOPMENT",
       subtitle: "We Are Leaders in Web Development",
       content:
@@ -47,21 +47,24 @@ export function Services() {
       image: bannerImg,
     },
     {
-      title: "ANOTHER TITLE",
+      id:"2",
+      title: "Mobillllllllllllllle",
       subtitle: "Subtitle for Another Title",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel felis nec urna hendrerit iaculis. Nullam ut mauris eget nunc gravida tristique eu a libero.",
       image: bannerImg,
     },
     {
-      title: "YET ANOTHER TITLE",
+      id:"3",
+      title: "chatbooooooooooot",
       subtitle: "Subtitle for Yet Another Title",
       content:
         "Sed euismod orci nec tellus tristique aliquet. Maecenas sit amet orci at dui tincidunt fermentum. Vestibulum auctor ligula et magna varius, vel fringilla justo malesuada.",
       image: "f",
     },
     {
-      title: "A NEW TITLE",
+      id:"4",
+      title: "destopppppppppp",
       subtitle: "Subtitle for A New Title",
       content:
         "Vivamus eget facilisis justo. Proin in felis eu elit lacinia feugiat. Ut vitae felis a justo tincidunt volutpat. Duis nec justo et dui tincidunt finibus a non mi.",
@@ -70,36 +73,42 @@ export function Services() {
   ];
   const testemonieParts = [
     {
+      id:"1",
       bannerImg: bannerImg,
       name: "Name1",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
+      id:"2",
       bannerImg: bannerImg,
       name: "Name1",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
+      id:"3",
       bannerImg: bannerImg,
       name: "Name1",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
+      id:"4",
       bannerImg: bannerImg,
       name: "Name2",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
+      id:"5",
       bannerImg: bannerImg,
       name: "Name3",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
+      id:"6",
       bannerImg: bannerImg,
       name: "Name4",
       description:
@@ -114,16 +123,16 @@ export function Services() {
         style={divStyle}
       >
         <div className="border-4 border-[#2DA2DD] md:w-[40vw] flex justify-center items-center ">
-          <div className="text-[#E0DED2] text-5xl font-semibold p-4  ">
+          <div className="ser:text-4xl text-[#E0DED2] text-5xl font-semibold p-4  ">
             <span className="text-[#2DA2DD]">What </span> We do
           </div>
         </div>
       </div>
       {/*  done*/}
 
-      <div className="bg-[#E0DED2] lg:rounded-br-[300px]  sm:rounded-br-[250px] rounded-br-[150px] pb-11">
+      <div className="bg-[#E0DED2] lg:rounded-br-[300px]  sm:rounded-br-[250px] rounded-br-[150px] ser:rounded-br-[100px] pb-11">
         <div className=" flex flex-col p-4  items-center ">
-          <div className="md:text-5xl text-4xl  font-semibold text-[#1F2029]">
+          <div className="md:text-5xl text-4xl font-semibold text-[#1F2029]">
             <span className="text-[#2DA2DD]">Our&nbsp;</span>Services
           </div>
           {/* <h2 className="text-xl font-extralight text-[#1F2029] pt-1">
@@ -133,32 +142,34 @@ export function Services() {
 
         {/* done */}
 
-        <div className="border-t-2 border-black w-9/12"></div>
+        <div className="border-t-[3px] border-black w-9/12"></div>
+
+        
         {/* partie services */}
-        <div className="lg:flex  justify-center gap-32">
+        <div className="lg:flex justify-center lg:gap-8 xl:gap-32 ">
           <ServiceComponent
             paragraphs={Services}
             onClickP={onClickP}
             onHover={onHover}
             onHoverOut={onHoverOut}
-            selectedParagraph={selectedParagraph}
+            parag={data[selectedParagraph]}
           />
 
-          <div className=" ">
+          <div className="service:hidden ">
             {data.map((item, index) => (
               <div
                 className=" flex-col items-center justify-center gap-7 pl-10 pr-10 mt-10 "
                 style={{
-                  display: selectedParagraph === index + 1 ? "flex" : "none",
+                  display: selectedParagraph === index ? "flex" : "none",
                 }}
               >
                 <div className="pt-1 relative">
                   <div className="bg-[#2DA2DD] sm:w-[450px] w-72 h-60 absolute  sm:right-[-20px] right-[-10px] "></div>
                   <img
                     src={item.image}
+                    style={{ objectFit: 'cover' }}
                     alt="Banner"
-                    className="sm:w-[450px] w-72 h-60 relative top-3"
-                  />
+                    className="sm:w-[450px] w-72 h-60 relative top-[20px] right-[30px]"/>
                 </div>
                 <div key={index} className="flex-col sm:w-[500px]">
                   <h2 className="pb-4 text-[#2DA2DD] font-bold ">
@@ -175,8 +186,8 @@ export function Services() {
         </div>
       </div>
 
-      {/* partie temoignages */}
 
+      {/* partie temoignages */}
       <div className=" flex flex-col justify-center items-center ">
         {/* titre  */}
         <div className=" flex text-center justify-center mt-6">
@@ -197,7 +208,7 @@ export function Services() {
       </div>
 
       {/* partie contact */}
-      <div className="bg-[#E0DED2] mt-24 pt-10 pb-16 lg:rounded-tl-[300px]  sm:rounded-tl-[250px] rounded-tl-[150px]" >
+      <div className="bg-[#E0DED2] mt-24 pt-10 pb-16 lg:rounded-tl-[300px]  sm:rounded-tl-[250px] rounded-tl-[150px] ser:rounded-tl-[100px]" >
         {/* titre */}
         <div className="flex flex-col items-center">
           <div className="ser:mt-[20px] sm:text-5xl text-4xl  font-semibold text-[#1F2029]">
@@ -211,7 +222,7 @@ export function Services() {
         {/* 2éme partie */}
         <div className=" flex justify-center items-center mt-12">
           <div className="flex service:flex-col service:gap-7 gap-x-5 items-center text-center ">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col ser:gap-1 gap-2">
             <DiveButton
               bgColor="bg-[#1F2029]"
               title="Our Portfolio"
@@ -219,7 +230,7 @@ export function Services() {
             />
             <DownloadButton />
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col ser:gap-1 gap-2">
             <DiveButton
               bgColor="bg-[#2DA2DD]"
               title="Work With Us"
