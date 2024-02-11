@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const ImageWithBlock = ({ imagePath, altText, poste }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showInnerBlock, setShowInnerBlock] = useState(false);
   const [image, setImage] = useState(null);
+  const targetRef = useRef(null);
 
   useEffect(() => {
     const importImage = async () => {
       try {
-        // Dynamically import the image using await and directly access the default property
         const importedImage = await import(`./img/${imagePath}`);
         setImage(importedImage.default);
       } catch (error) {
@@ -19,13 +19,39 @@ const ImageWithBlock = ({ imagePath, altText, poste }) => {
     importImage();
   }, [imagePath]);
 
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsHovered(true);
+          setShowInnerBlock(true);
+        } else {
+          setIsHovered(false);
+          setShowInnerBlock(false);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null, // Use the viewport as the root
+      rootMargin: "0px", // No margin around the root
+      threshold: 0.5, // Trigger when 50% of the element is visible
+    });
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
+    };
+  }, [targetRef]);
+
   const handleMouseEnter = () => {
     setIsHovered(true);
-
-    // Set a timeout to show the inner block after a certain time (e.g., 500 milliseconds)
-    
-      setShowInnerBlock(true);
-    
+    setShowInnerBlock(true);
   };
 
   const handleMouseLeave = () => {
@@ -35,20 +61,22 @@ const ImageWithBlock = ({ imagePath, altText, poste }) => {
 
   return (
     <div
+      ref={targetRef}
       className={
-        "cont flex flex-col justify-center  relative w-[255px] h-[330px] cursor-pointer   "
+        "cont flex flex-col justify-center relative  cursor-pointer xxs:h-[300px] xxs:w-[230px] mmmxs:h-[250px] mmmxs:w-[190px] xsm:h-[300px] xsm:w-[230px]  mx-auto "
       }
       style={{
         borderColor: "#1F2029",
         transition: "0.7s",
         zIndex: 0,
+        
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {image && (
         <img
-          className="w-[100%] h-[100%] object-cover absolute "
+          className="w-[100%] h-[100%] object-cover absolute mx-auto "
           src={image}
           alt={altText}
           style={{
@@ -67,17 +95,17 @@ const ImageWithBlock = ({ imagePath, altText, poste }) => {
           style={{
             opacity: 1,
             transition: "opacity 0.7s, transform 0.7s",
-            zIndex: 2
+            zIndex: 2,
           }}
         >
           <div
-            className="text-[15px] font-bold proxima-nova-bold"
+            className="text-[13px] font-bold proxima-nova-bold"
             style={{ color: "#E0DED2", whiteSpace: "pre-line" }}
           >
             {poste}
           </div>
           <div
-            className="text-[30px] font-photograph-signature"
+            className="text-[25px] font-photograph-signature"
             style={{ color: "#E0DED2" }}
           >
             {altText}

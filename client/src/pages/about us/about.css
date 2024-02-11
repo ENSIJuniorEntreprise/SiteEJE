@@ -1,4 +1,4 @@
-img {
+.cont img {
   --color: #1f2029; /* the border color */
   --border: 4px; /* the border thickness*/
   --offset: 20px; /* control the offset*/
@@ -16,7 +16,7 @@ img {
   background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
   background-repeat: no-repeat;
   filter: grayscale(0);
-  transition: 0.5s;
+  transition: 0.4s;
   cursor: pointer;
 }
 
