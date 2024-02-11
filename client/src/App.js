@@ -6,15 +6,10 @@ import { Contact } from "./pages/contact/Contact";
 import { About } from "./pages/about us/About";
 import { Events } from "./pages/events/Events";
 import { Services } from "./pages/services/Services";
-
 import { Footer } from "./components/Footer";
-<<<<<<< HEAD
-import  Newsletter from "./components/Newsletter";
 import Navbar from "./components/Navbar";
-=======
-import { Newsletter } from "./components/Newsletter";
+import Newsletter  from "./components/Newsletter";
 import { Article } from "./pages/news/Article/Article";
->>>>>>> 8ad14f6fe420244e95e306b71703ca5ce297c113
 
 function App() {
 

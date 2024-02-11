@@ -2,7 +2,7 @@ import { RightArticle } from "./RightArticle";
 import { bannerImg, image } from "../../assets/file";
 
 import Button from "./Button";
-import Search from "./search";
+import Search from "./Search";
 import FirstHighlight from "./FirstHighlight";
 import Banner from "./Banner";
 import { useState } from "react";
