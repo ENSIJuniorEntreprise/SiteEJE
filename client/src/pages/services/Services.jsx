@@ -110,7 +110,7 @@ export function Services() {
   return (
     <div className="bg-[#1F2029]">
       <div
-        className=" h-[400px] w-[100%] flex items-center justify-center "
+        className=" h-[500px] w-[100%] flex items-center justify-center "
         style={divStyle}
       >
         <div className="border-4 border-[#2DA2DD] md:w-[40vw] flex justify-center items-center ">
@@ -197,32 +197,36 @@ export function Services() {
       </div>
 
       {/* partie contact */}
-      <div className="bg-[#E0DED2] rounded-tl-[350px] mt-24 pt-10 pb-16">
+      <div className="bg-[#E0DED2] mt-24 pt-10 pb-16 lg:rounded-tl-[300px]  sm:rounded-tl-[250px] rounded-tl-[150px]" >
         {/* titre */}
         <div className="flex flex-col items-center">
-          <div className="text-5xl  font-semibold text-[#1F2029]">
+          <div className="ser:mt-[20px] sm:text-5xl text-4xl  font-semibold text-[#1F2029]">
             <span className="text-[#2DA2DD]">Dive </span>Deeper
           </div>
-          <h2 className="text-xl  font-semibold text-[#1F2029] pt-1">
+          <h2 className="ser:text-lg text-xl  font-semibold text-[#1F2029] pt-1">
             Discover the core of our service
           </h2>
         </div>
 
         {/* 2éme partie */}
         <div className=" flex justify-center items-center mt-12">
-          <div className="inline-grid grid-cols-2 gap-x-5 gap-y-2 items-center text-center ">
+          <div className="flex service:flex-col service:gap-7 gap-x-5 items-center text-center ">
+            <div className="flex flex-col gap-2">
             <DiveButton
               bgColor="bg-[#1F2029]"
               title="Our Portfolio"
               subtitle="Discover the core of our services"
             />
+            <DownloadButton />
+            </div>
+            <div className="flex flex-col gap-2">
             <DiveButton
               bgColor="bg-[#2DA2DD]"
               title="Work With Us"
-              subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing"
+              subtitle="Lorem ipsum dolor sit amet "
             />
-            <DownloadButton />
             <ContactButton />
+            </div>
           </div>
         </div>
       </div>

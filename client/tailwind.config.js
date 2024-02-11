@@ -11,6 +11,10 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        'service': {'max': '639px'},
+        'ser': {'max': '400px'},
+      },
       fontFamily: {
         Montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },

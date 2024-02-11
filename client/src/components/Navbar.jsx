@@ -1,3 +1,3 @@
 export function Navbar() {
-  return <div>Navbar</div>;
+  return <div className="h-[70px]">Navbar</div>;
 }
