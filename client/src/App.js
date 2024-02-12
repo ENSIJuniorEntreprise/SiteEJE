@@ -6,7 +6,7 @@ import { Contact } from "./pages/contact/Contact";
 import { About } from "./pages/about us/About";
 import { Events } from "./pages/events/Events";
 import { Services } from "./pages/services/Services";
-import { Navbar } from "./components/Navbar";
+import  Navbar  from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Newsletter } from "./components/Newsletter";
 function App() {
