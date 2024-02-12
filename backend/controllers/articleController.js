@@ -88,6 +88,8 @@ const updateArticleById = async (req, res) => {
             onFront,
         }, { new: true });
 
+        console.log(updatedArticle);
+
         if (!updatedArticle) {
             return res.status(404).json({ error: "Article not found." });
         }
