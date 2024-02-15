@@ -123,7 +123,7 @@ const login = async (req, res) => {
     const isPasswordMatch = bcrypt.compare(password, admin.password);
     if (isPasswordMatch) {
       const accessToken = jwt.sign({ admin: username }, jwtSecretKey, { expiresIn: '10s' });
-      const refreshToken = jwt.sign({ admin: username }, refreshSecretKey, { expiresIn: '30s' });
+      const refreshToken = jwt.sign({ admin: username }, refreshSecretKey, { expiresIn: '1d' });
 
       let admins = await findAllAdmins();
       //const otherAdmins = admins.filter((admin) => admin.username === username;
@@ -180,13 +180,17 @@ const getAccountInfo = async (req, res) => {
       return res.status(404).json({ error: 'Admin account not found' });
     }
 
-    // Respond with the admin's account information
-    res.json({ accountInfo });
+    // Extract the fullName attribute from the accountInfo object
+    const { fullName } = accountInfo;
+
+    // Respond with only the fullName attribute
+    res.json({ fullName });
   } catch (error) {
     console.error('Error fetching account info:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }
+
 
 const setAccountInfo = async (req, res) => {
   const adminId = req.params.identifier;
