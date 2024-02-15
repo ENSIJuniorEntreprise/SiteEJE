@@ -47,6 +47,7 @@ const deleteSubscriberById = async (req, res) => {
 
 
 const sendEmailToSubscribers = async (req, res) => {
+    console.log(req.body);
     const { subject, text } = req.body;
     let failedEmails = [];
 
