@@ -1,4 +1,4 @@
-import hackprise from "..../assets/Rectangle 3.png"
+import hackprise from "./../../../assets/Rectangle 3.png"
 function ArchiveCard(){
     return(
         <div className="relative flex flex-col bg-[#e0ded2] w-full h-auto md:w-[385px] md:h-[420px] ">

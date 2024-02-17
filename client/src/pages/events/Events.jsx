@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import {EffectCoverFlow,Pagination,Navigation} from 'swiper';
 
-import Rectangle from '.../assets/Rectangle.png'
+import Rectangle from './../../assets/Rectangle.png'
 import Card from './components/Card.jsx'
 import ArchiveCard from './components/ArchiveCard.jsx'
 
@@ -149,7 +149,7 @@ function Events() {
     </div>
   )
 }
-export default Events
+export default Events;
 
 
 
