@@ -51,11 +51,12 @@ async function findAdminByIdentifier(username) {
   }
 }
 
-async function findAllAdmins() {
+async function findAllAdmins(req, res) {
   try {
     const admins = await Admin.find();
     if (admins !== null) {
       const updatedAdmins = admins.map((admin) => admin.toObject());
+      
       return updatedAdmins;
     } else {
       return null;
@@ -65,6 +66,29 @@ async function findAllAdmins() {
     return null;
   }
 }
+
+async function getAccounts(req, res) {
+  try {
+    const admins = await Admin.find();
+    if (admins !== null) {
+      const updatedAdmins = admins.map((admin) => {
+        return {
+          _id: admin._id, // Include the _id field
+          fullName: admin.fullName
+        };
+      });
+      
+      return res.status(200).json(updatedAdmins);
+
+    } else {
+      return res.status(404).json({ message: 'No admins found' });
+    }
+  } catch (error) {
+    console.log('Error: ', error);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
+}
+
 
 const signup = async (req, res) => {
   try {
@@ -181,10 +205,10 @@ const getAccountInfo = async (req, res) => {
     }
 
     // Extract the fullName attribute from the accountInfo object
-    const { fullName } = accountInfo;
+    const { _id, fullName } = accountInfo;
 
     // Respond with only the fullName attribute
-    res.json({ fullName });
+    res.json({ _id, fullName });
   } catch (error) {
     console.error('Error fetching account info:', error);
     res.status(500).json({ error: 'Internal server error' });
@@ -223,11 +247,33 @@ const setAccountInfo = async (req, res) => {
   }
 }
 
+const deleteAccount = async (req, res) => {
+  const adminId = req.params.id;
+  console.log(adminId);
+
+  try {
+    const deletedAdmin = await Admin.findByIdAndDelete(adminId);
+
+    if (!deletedAdmin) {
+      return res.status(404).json({ error: 'Admin not found' });
+    }
+
+    // Optionally, perform additional cleanup or tasks related to deleting the account
+
+    return res.json({ message: 'Admin deleted successfully' });
+  } catch (error) {
+    console.error('Error: ', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
+
 module.exports = {
   signup,
   login,
   checkPassword,
   logout,
   getAccountInfo,
-  setAccountInfo
+  setAccountInfo,
+  getAccounts,
+  deleteAccount
 }

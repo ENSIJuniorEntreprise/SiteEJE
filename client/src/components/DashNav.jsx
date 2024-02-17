@@ -38,6 +38,7 @@ const DashNav = ({setPage}) => {
                 <li className='bg-[#1f212d] hover:bg-[#1f212dc9] h-full w-40'><button onClick={() => setPage("events")} className='w-full h-full'>events</button></li>
                 <li className='bg-[#1f212d] hover:bg-[#1f212dc9] h-full w-40'><button onClick={() => setPage("newsletter")} className='w-full h-full'>newsletter</button></li>
                 <li className='bg-[#1f212d] hover:bg-[#1f212dc9] h-full w-40'><button onClick={() => setPage("email")} className='w-full h-full'>emails</button></li>
+                <li className='bg-[#1f212d] hover:bg-[#1f212dc9] h-full w-40'><button onClick={() => setPage("settings")} className='w-full h-full'>settings</button></li>
             </ul>
             <button className='hover:underline underline-offset-2' onClick={signout}>log out</button>
         </nav>
