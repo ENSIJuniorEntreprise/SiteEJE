@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from "../components/Button";
-import pic from "../assets/EJEhome.png";
+import pic from "../assets/team.png";
 function Who() {
   return (
     <div className='dark-blue-gradient h-fit w-full px-12 py-32 grid grid-cols-1 justify-center items-center md:grid-cols-2 gap-5'>

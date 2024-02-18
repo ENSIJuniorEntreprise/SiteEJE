@@ -12,7 +12,6 @@ export function Home() {
   return (
     <div className='bg-dark-blue overflow-clip font-Monserrat'>
     <Carousel/>
-    <Landing/>
     <Who/>
     <Timeline/>
     <Numbers/>
