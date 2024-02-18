@@ -138,13 +138,14 @@ const checkPassword = async (req, res) => {
 const login = async (req, res) => {
   const { username, password } = req.body;
 
+
   try {
     const admin = await findAdminByIdentifier(username);
     if (!admin) {
       return res.status(404).json({ error: 'Account not found' });
     }
 
-    const isPasswordMatch = bcrypt.compare(password, admin.password);
+    const isPasswordMatch = await bcrypt.compare(password, admin.password);
     if (isPasswordMatch) {
       const accessToken = jwt.sign({ admin: username }, jwtSecretKey, { expiresIn: '10s' });
       const refreshToken = jwt.sign({ admin: username }, refreshSecretKey, { expiresIn: '1d' });

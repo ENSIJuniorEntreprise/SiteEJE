@@ -70,14 +70,13 @@ const AccountSettings = () => {
 
     return (
         <div className='p-20 bg-[#e0ded2] text-[#1f212d] flex flex-col items-start gap-10'>
-            
+
             <div className='flex justify-between items-center w-full'>
                 <div className='flex flex-col gap-10'>
 
                     <h1 className='text-2xl font-semibold'>Current admin: </h1>
                     <h1 className='flex items-center gap-10'>
                         <h1 className='text-xl'>{userData.fullName}</h1>
-                        <button className='bg-[#1f212d] text-[#e0ded2] px-4 py-2 rounded'>Edit account</button>
                     </h1>
 
                 </div>
@@ -88,12 +87,14 @@ const AccountSettings = () => {
             </div>
             <ul className=''>
                 {admins.map((admin, index) => {
-                    return (
-                        <li key={index} className='flex items-center gap-10'>
-                            <h1 className='text-xl'>• {admin.fullName}</h1>
-                            <button onClick={() => handleDeleteAdmin(admin._id)} className='bg-[#1f212d] text-[#e0ded2] px-4 py-2 rounded'>Remove admin</button>
-                        </li>
-                    )
+                    if (admin._id !== userData._id) {
+                        return (
+                            <li key={index} className='flex items-center gap-10'>
+                                <h1 className='text-xl'>• {admin.fullName}</h1>
+                                <button onClick={() => handleDeleteAdmin(admin._id)} className='bg-[#1f212d] text-[#e0ded2] px-4 py-2 rounded'>Remove admin</button>
+                            </li>
+                        )
+                    }
                 })}
             </ul>
 

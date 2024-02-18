@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import useAuth from '../../hooks/useAuth';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import bcrypt from 'bcryptjs'
 import axios from '../../api/axios'
 
 const Login = () => {
@@ -27,6 +28,7 @@ const Login = () => {
 
   const get = async () => {
     try {
+      
       const result = await axios.post('/auth/login',
         JSON.stringify({ username: info.username, password: info.password }),
         {
@@ -65,6 +67,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
 
 
     setInfo({

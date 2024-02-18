@@ -94,61 +94,57 @@ const EventPop = ({ togglePopup, fetchData }) => {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg">
-        <h2 className="text-lg font-semibold mb-4">Add New Event</h2>
-        <div className="mb-4">
-          <label htmlFor="title" className="block text-sm font-medium text-gray-700">Title:</label>
-          <input type="text" id="title" value={newEventData.title} onChange={(e) => handleNewEventInputChange(e, 'title')} className="mt-1 block w-full border-gray-300 rounded-md" />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="description" className="block text-sm font-medium text-gray-700">Description:</label>
-          <input type="text" id="description" value={newEventData.description} onChange={(e) => handleNewEventInputChange(e, 'description')} className="mt-1 block w-full border-gray-300 rounded-md" />
-        </div>
-        <div className="mb-4">
-          {newEventData.photos.map((photo, index) => (
-            <div key={index} onDrop={(e) => handleFileDrop(e, index)} onDragOver={handleDragOver}>
-              <label htmlFor={`photo${index}`} className="block text-sm font-medium text-gray-700">Photo {index + 1}:</label>
-              <input type="file" id={`photo${index}`} onChange={(e) => handleFileInputChange(e, index)} className="hidden" />
-              <label htmlFor={`photo${index}`} className="border border-dashed border-gray-400 p-4 rounded-md cursor-pointer block">
-                {photo ?
-                  <img src={photo} alt={`Uploaded ${index + 1}`} className="w-full h-auto mb-2" /> :
-                  "Drag & Drop or Click to Upload"
-                }
-              </label>
-            </div>
-          ))}
-        </div>
-        <div className="mb-4">
-          <label htmlFor="date" className="block text-sm font-medium text-gray-700">Date:</label>
-          <input type="date" id="date" value={newEventData.date} onChange={(e) => handleNewEventInputChange(e, 'date')} className="mt-1 block w-full border-gray-300 rounded-md" />
-        </div>
-        <div className="mb-4">
-          {newEventData.subTitles.map((subtitle, index) => (
-            <div key={index}>
-              <label htmlFor={`subtitle${index}`} className="block text-sm font-medium text-gray-700">Subtitle {index + 1}:</label>
-              <input type="text" id={`subtitle${index}`} value={subtitle} onChange={(e) => handleNewEventInputChange(e, 'subTitles', index)} className="mt-1 block w-full border-gray-300 rounded-md" />
-            </div>
-          ))}
-        </div>
-        <div className="mb-4">
-          {newEventData.paragraphs.map((paragraph, index) => (
-            <div key={index}>
-              <label htmlFor={`paragraph${index}`} className="block text-sm font-medium text-gray-700">Paragraph {index + 1}:</label>
-              <textarea id={`paragraph${index}`} value={paragraph} onChange={(e) => handleNewEventInputChange(e, 'paragraphs', index)} className="mt-1 block w-full border-gray-300 rounded-md"></textarea>
-            </div>
-          ))}
-
-        </div>
-        <div className="mb-4">
-          <label htmlFor="newest" className="block text-sm font-medium text-gray-700">Newest:</label>
-          <input type="checkbox" id="newest" checked={newEventData.newest} onChange={(e) => handleNewEventInputChange(e, 'newest')} className="mt-1" />
-        </div>
-        <div className="flex justify-end">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded mr-2" onClick={addNewEvent}>Add</button>
-          <button className="bg-gray-300 text-gray-800 px-4 py-2 rounded" onClick={togglePopup}>Cancel</button>
-        </div>
-      </div>
+  <div className="bg-white p-8 rounded-lg w-96 h-96 overflow-y-auto">
+    <h2 className="text-lg font-semibold mb-4">Add New Event</h2>
+    <div className="mb-4">
+      <label htmlFor="title" className="block text-sm font-medium text-gray-700">Title:</label>
+      <input type="text" id="title" value={newEventData.title} onChange={(e) => handleNewEventInputChange(e, 'title')} className="mt-1 block w-full border-gray-300 rounded-md" />
     </div>
+    <div className="mb-4">
+      <label htmlFor="description" className="block text-sm font-medium text-gray-700">Description:</label>
+      <input type="text" id="description" value={newEventData.description} onChange={(e) => handleNewEventInputChange(e, 'description')} className="mt-1 block w-full border-gray-300 rounded-md" />
+    </div>
+    <div className="mb-4">
+      {newEventData.photos.map((photo, index) => (
+        <div key={index} onDrop={(e) => handleFileDrop(e, index)} onDragOver={handleDragOver}>
+          <label htmlFor={`photo${index}`} className="block text-sm font-medium text-gray-700">Photo {index + 1}:</label>
+          <input type="file" id={`photo${index}`} onChange={(e) => handleFileInputChange(e, index)} className="hidden" />
+          <label htmlFor={`photo${index}`} className="border border-dashed border-gray-400 p-4 rounded-md cursor-pointer block">
+            {photo ?
+              <img src={photo} alt={`Uploaded ${index + 1}`} className="w-full h-auto mb-2" /> :
+              "Drag & Drop or Click to Upload"
+            }
+          </label>
+        </div>
+      ))}
+    </div>
+    <div className="mb-4">
+      {newEventData.subTitles.map((subtitle, index) => (
+        <div key={index}>
+          <label htmlFor={`subtitle${index}`} className="block text-sm font-medium text-gray-700">Subtitle {index + 1}:</label>
+          <input type="text" id={`subtitle${index}`} value={subtitle} onChange={(e) => handleNewEventInputChange(e, 'subTitles', index)} className="mt-1 block w-full border-gray-300 rounded-md" />
+        </div>
+      ))}
+    </div>
+    <div className="mb-4">
+      {newEventData.paragraphs.map((paragraph, index) => (
+        <div key={index}>
+          <label htmlFor={`paragraph${index}`} className="block text-sm font-medium text-gray-700">Paragraph {index + 1}:</label>
+          <textarea id={`paragraph${index}`} value={paragraph} onChange={(e) => handleNewEventInputChange(e, 'paragraphs', index)} className="resize-none mt-1 block w-full border-gray-300 rounded-md"></textarea>
+        </div>
+      ))}
+    </div>
+    <div className="mb-4">
+      <label htmlFor="newest" className="block text-sm font-medium text-gray-700">Newest:</label>
+      <input type="checkbox" id="newest" checked={newEventData.newest} onChange={(e) => handleNewEventInputChange(e, 'newest')} className="mt-1" />
+    </div>
+    <div className="flex justify-end">
+      <button className="bg-blue-500 text-white px-4 py-2 rounded mr-2" onClick={addNewEvent}>Add</button>
+      <button className="bg-gray-300 text-gray-800 px-4 py-2 rounded" onClick={togglePopup}>Cancel</button>
+    </div>
+  </div>
+</div>
+
   )
 }
 

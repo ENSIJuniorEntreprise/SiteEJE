@@ -88,11 +88,11 @@ const ArticlePopup = ({ togglePopup, fetchData }) => {
                 </div>
                 <div className="mb-4">
                     <label htmlFor="description" className="block text-sm font-medium text-gray-700">Description:</label>
-                    <textarea id="description" value={newArticleData.description} onChange={(e) => handleNewArticleInputChange(e, 'description')} className="mt-1 block w-full border-gray-300 rounded-md"></textarea>
+                    <textarea id="description" value={newArticleData.description} onChange={(e) => handleNewArticleInputChange(e, 'description')} className="resize-none mt-1 block w-full border-gray-300 rounded-md"></textarea>
                 </div>
                 <div className="mb-4">
                     <label htmlFor="content" className="block text-sm font-medium text-gray-700">Content:</label>
-                    <textarea id="content" value={newArticleData.content} onChange={(e) => handleNewArticleInputChange(e, 'content')} className="mt-1 block w-full border-gray-300 rounded-md"></textarea>
+                    <textarea id="content" value={newArticleData.content} onChange={(e) => handleNewArticleInputChange(e, 'content')} className="resize-none mt-1 block w-full border-gray-300 rounded-md"></textarea>
                 </div>
                 <div className="flex justify-end">
                     <button className="bg-blue-500 text-white px-4 py-2 rounded mr-2" onClick={addNewArticle}>Add</button>
