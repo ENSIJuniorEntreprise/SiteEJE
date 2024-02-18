@@ -10,7 +10,7 @@ const DownloadButton = () => {
   return (
     <div className="lg:w-96 h-24 flex items-center justify-center gap-6 border-[3px] sm:w-[37vw]" style={borderStyle}>
       <img src={downloadIcon} className="w-12 h-12" alt="download icon" />
-      <div className="text-[#1F2029] font-semibold text-lg">Download Here</div>
+      <div className="ser:text-base text-[#1F2029] font-semibold text-lg">Download Here</div>
     </div>
   );
 };

@@ -6,6 +6,7 @@ const Testemonie = ({ bannerImg, name, description }) => {
       <img
         src={bannerImg}
         alt=""
+        style={{ objectFit: 'cover' }}
         className="w-20 h-20 rounded-full border-8 border-[#2DA2DD]"
       />
       <div className="pl-6  flex flex-col justify-between">
