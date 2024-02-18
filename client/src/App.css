@@ -49,3 +49,33 @@
     display: none;
   }
   
+
+* {
+    font-family:'Proxima Nova Regular'; ;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url(./assets/Fonts/Proxima-Nova-Font/proxima_ssv/ProximaNova-Regular.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url(./assets/Fonts/Proxima-Nova-Font/proxima_ssv/Proxima\ Nova\ Bold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova ExtraBold';
+    src: url(./assets/Fonts/Proxima-Nova-Font/proxima_ssv/Proxima\ Nova\ Extrabold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Gilroy ExtraBold';
+    src: url(./assets/Fonts/Gilroy-FREE/Gilroy-FREE/Gilroy-ExtraBold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Photograph Signature';
+    src: url(./assets/Fonts/photograph_signature/Photograph\ Signature.ttf) format('truetype');
+}
+
