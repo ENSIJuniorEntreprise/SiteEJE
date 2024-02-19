@@ -11,6 +11,13 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily:{
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'lato': ['Lato'],
+        'garamond': ['Garamond'],
+        'Photograph':['Photograoh Signature'],
+        'brush':['Brush Script MT']
+      },
       screens: {
         'xxs': '100px',
         'xs': '400px',
