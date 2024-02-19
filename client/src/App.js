@@ -9,7 +9,6 @@ import { Services } from "./pages/services/Services";
 import Footer  from "./components/Footer";
 import  Newsletter from "./components/Newsletter";
 import Navbar from "./components/Navbar";
-import { Newsletter } from "./components/Newsletter";
 import { Article } from "./pages/news/Article/Article";
 
 function App() {
