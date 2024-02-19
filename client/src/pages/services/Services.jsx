@@ -39,7 +39,8 @@ export function Services() {
   };
 
   const data = [
-    { id:"1",
+    {
+      id: "1",
       title: "FEW WORDS ABOUT WEB DEVELOPMENT",
       subtitle: "We Are Leaders in Web Development",
       content:
@@ -47,7 +48,7 @@ export function Services() {
       image: bannerImg,
     },
     {
-      id:"2",
+      id: "2",
       title: "Mobillllllllllllllle",
       subtitle: "Subtitle for Another Title",
       content:
@@ -55,7 +56,7 @@ export function Services() {
       image: bannerImg,
     },
     {
-      id:"3",
+      id: "3",
       title: "chatbooooooooooot",
       subtitle: "Subtitle for Yet Another Title",
       content:
@@ -63,7 +64,7 @@ export function Services() {
       image: "f",
     },
     {
-      id:"4",
+      id: "4",
       title: "destopppppppppp",
       subtitle: "Subtitle for A New Title",
       content:
@@ -73,42 +74,42 @@ export function Services() {
   ];
   const testemonieParts = [
     {
-      id:"1",
+      id: "1",
       bannerImg: bannerImg,
       name: "Name1",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
-      id:"2",
+      id: "2",
       bannerImg: bannerImg,
       name: "Name1",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
-      id:"3",
+      id: "3",
       bannerImg: bannerImg,
       name: "Name1",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
-      id:"4",
+      id: "4",
       bannerImg: bannerImg,
       name: "Name2",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
-      id:"5",
+      id: "5",
       bannerImg: bannerImg,
       name: "Name3",
       description:
         "Sample text. Click to select the text box. Click again or double click to start editing the text.",
     },
     {
-      id:"6",
+      id: "6",
       bannerImg: bannerImg,
       name: "Name4",
       description:
@@ -144,7 +145,7 @@ export function Services() {
 
         <div className="border-t-[3px] border-black w-9/12"></div>
 
-        
+
         {/* partie services */}
         <div className="lg:flex justify-center lg:gap-8 xl:gap-32 ">
           <ServiceComponent
@@ -169,7 +170,7 @@ export function Services() {
                     src={item.image}
                     style={{ objectFit: 'cover' }}
                     alt="Banner"
-                    className="sm:w-[450px] w-72 h-60 relative top-[20px] right-[30px]"/>
+                    className="sm:w-[450px] w-72 h-60 relative top-[20px] right-[30px]" />
                 </div>
                 <div key={index} className="flex-col sm:w-[500px]">
                   <h2 className="pb-4 text-[#2DA2DD] font-bold ">
@@ -220,27 +221,32 @@ export function Services() {
         </div>
 
         {/* 2éme partie */}
-        <div className=" flex justify-center items-center mt-12">
-          <div className="flex service:flex-col service:gap-7 gap-x-5 items-center text-center ">
-            <div className="flex flex-col ser:gap-1 gap-2">
-            <DiveButton
-              bgColor="bg-[#1F2029]"
-              title="Our Portfolio"
-              subtitle="Discover the core of our services"
-            />
+
+        <section className='flex flex-col justify-center font-Montserrat items-center bg-beige rounded-tl-[340px] h-fit gap-16 p-20'>
+          <div className='grid md:grid-cols-2 gap-2'>
+            <div className='bg-dark-blue flex flex-col justify-center items-center gap-3 text-beige p-4 lg:p-8'><h1 className='text-3xl'>Our Portfolio</h1>
+              <p className='opacity-90 text-center'>Discover the core of our services</p>
+            </div>
+
+            <div className=' border-[3px] border-gradient-dark-blue flex justify-center items-center gap-5 p-8 font-medium md:row-start-2'>
             <DownloadButton />
             </div>
-            <div className="flex flex-col ser:gap-1 gap-2">
-            <DiveButton
-              bgColor="bg-[#2DA2DD]"
-              title="Work With Us"
-              subtitle="Lorem ipsum dolor sit amet "
-            />
-            <ContactButton />
+
+            <div className='bg-light-blue flex flex-col justify-center items-center gap-3 text-beige p-4 lg:p-8'>
+              <h1 className='text-3xl'>Work With Us</h1>
+              <p className='opacity-90 text-center'>Lorem ipsum dolor sit amet</p>
             </div>
+
+            <div className=' border-[3px] border-gradient-blue flex items-center justify-center gap-5 p-8 font-medium'>
+              <ContactButton />
+
+            </div>
+
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
 }
+
+
