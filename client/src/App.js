@@ -4,7 +4,7 @@ import { Home } from "./pages/home/Home";
 import { News } from "./pages/news/News";
 import { Contact } from "./pages/contact/Contact";
 import { About } from "./pages/about us/About";
-import { Events } from "./pages/events/Events";
+import Events  from "./pages/events/Events";
 import { Services } from "./pages/services/Services";
 import  Navbar  from "./components/Navbar";
 import { Footer } from "./components/Footer";
