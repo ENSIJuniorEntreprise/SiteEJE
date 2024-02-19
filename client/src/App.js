@@ -8,10 +8,14 @@ import Events  from "./pages/events/Events";
 import { Services } from "./pages/services/Services";
 import  Navbar  from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import { Newsletter } from "./components/Newsletter";
+import Navbar from "./components/Navbar";
+import Newsletter  from "./components/Newsletter";
+import { Article } from "./pages/news/Article/Article";
 
 function App() {
+
   return (
+    
     <div>
       <Navbar />
       <Router>
@@ -22,6 +26,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/article" element={<Article />} />
+
           <Route path="*" element={<div>404 not found</div>} />
         </Routes>
       </Router>
