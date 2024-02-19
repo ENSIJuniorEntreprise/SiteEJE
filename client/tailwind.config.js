@@ -26,7 +26,7 @@ module.exports = {
         'xl': '1280px',
         'dxl':'1316px',
         '2xl': '1536px',
-        'yxs': {'min': '300px', 'max': '500px'},
+        'yxs': '300px',
 
         
       },

@@ -8,7 +8,6 @@ import Events  from "./pages/events/Events";
 import { Services } from "./pages/services/Services";
 import  Navbar  from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import Navbar from "./components/Navbar";
 import Newsletter  from "./components/Newsletter";
 import { Article } from "./pages/news/Article/Article";
 
