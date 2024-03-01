@@ -16,7 +16,7 @@ export function About() {
       style={{ background: "#1F2029" }}
     >
       <div
-        className="w-[100%] h-[600px] dlg:h-[500px] xxs:h-[450px] "
+        className="w-[100%] h-[600px] dlg:h-[550px] xxs:h-[450px] "
         style={{
           backgroundImage: `url(${eje})`,
           backgroundSize: "cover",
@@ -75,6 +75,7 @@ export function About() {
             >
               nterprise
             </span>
+            
           </div>
         </div>
       </div>

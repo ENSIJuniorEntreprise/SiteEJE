@@ -22,12 +22,35 @@ function Banner() {
             left: 0,
           }}
         >
-          {/* Image content */}
-        </div>
-        <div className="border-4 border-[#2DA2DD]  w-[350px]  yxs:w-[300px] sm:w-[400px] md:w-[500px] xl:w-[500px] 2xl:w-[600px] flex justify-center items-center relative">
-          <div className="text-2xl text-black yxs:text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl  font-semibold p-8">
-            <span className="text-[#DFDED2] font-montserrat ">News </span>
+                  <div
+          className="w-[100%] h-[100%] flex justify-center items-center md:text-center "
+          style={{ backgroundColor: "rgba(31, 32, 41, 0.8)" }}
+        >
+          <div
+            className="border  p-[1%] pl-4 pr-4 dlg:pr-[3%] dlg:pl-[3%] "
+            style={{
+              backgroundColor: "rgba(31, 32, 41, 0.8)",
+              borderColor: "#2DA2DD",
+              borderWidth: "4px",
+              zIndex: 1,
+              whiteSpace: "pre-line",
+            }}
+          >
+            <span
+              className="text-[65px] font-bold proxima-nova-extrabold xxs:text-[50px]"
+              style={{ color: "#2DA2DD" }}
+            >
+              N
+            </span>
+            <span
+              className="text-[65px]  font-bold proxima-nova-extrabold xxs:text-[50px]"
+              style={{ color: "#E0DED2" }}
+            >
+              ews&nbsp;
+            </span>
+            
           </div>
+        </div>
         </div>
       </div>
     </div>

@@ -1,20 +1,23 @@
 import React from 'react'
 import Button from "../components/Button";
-import pic from "../assets/team.png";
+import pic from "../assets/EJE.jpg";
 function Who() {
   return (
-    <div className='dark-blue-gradient h-fit w-full px-12 py-32 grid grid-cols-1 justify-center items-center md:grid-cols-2 gap-5'>
-      <div className=' flex justify-center m-4 row-start-2 md:row-start-1 scale-150'>
-        <img src={pic} width={500} alt='EJE' />
-      </div>
-      <div className='flex flex-col gap-7 p-8'>
-        <h1 className='text-beige text-4xl font-Montserrat font-bold xl:text-7xl'><span className='text-light-blue'>Who</span> are we ?</h1>
-        <div className='w-[100px] h-[3px] bg-light-blue'></div>
-        <p className='text-beige opacity-80 text-md font-extralight font-Montserrat mb-2 mt-2 w-3/4 md:text-xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc
-        o laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <Button bc="border-beige" tc="text-beige">Learn more</Button>
-        </div>
+    <div className='xxs:pt-20 xxs:pb-10 xsm:pb-16 xsm:px-32 md:px-0 md:py-10 md:pb-12 md:gap-24 h-fit w-full xl:px-12 py-32 grid grid-cols-1 justify-center items-center md:grid-cols-2 ddmd:gap-5 xl:p-32'>
+    <div className='h-full relative md:pt-3'>
+        <div className="xxs:h-[70vw] xxs:w-[70vw] xxs:left-[10vw] xxs:top-[18vw] xs:w-[60vw] xs:h-[60vw] xs:left-[10vw] xs:top-[18vw] xsm:h-[45vw] xsm:w-[45vw] xsm:top-[10vw] xsm:left-[7vw] md:w-[40vw] md:h-[40vw] md:left-[3vw] md:top-[15vw] bg-[#2DA2DD] absolute inset-0 ddmd:w-[30vw] ddmd:h-[30vw] ddmd:top-[18vw] dlg:h-[25vw] dlg:w-[25vw] dlg:left-[3vw] dlg:top-[8.5vw]"></div>
+        <img src={pic} className='xxs:w-[70vw] xs:w-[60vw] xsm:h-[45vw] xsm:w-[45vw] md:w-[40vw] md:mt-16 md:ml-[12%]  w-[55%] ml-[20%] mt-[10%] ddmd:w-[30vw] object-contain z-10 relative dlg:h-[25vw] dlg:w-[25vw]' alt='EJE' />
     </div>
+
+
+      <div className='xxs:p-5 xxs:mt-[30px] xs:p-10 xsm:p-0 xsm:pt-10 flex flex-col gap-7 xl:p-8'>
+        <h1 className='text-beige xxs:text-4xl  xs:text-5xl font-proxima-nova-bold font-bold xl:text-7xl'><span className='text-light-blue font-proxima-nova-bold'>Who</span> are we ?</h1>
+        <div className='w-[100px] h-[3px] bg-light-blue'></div>
+        <p className= 'w-full text-beige opacity-80 text-md md:text-md font-extralight font-proxima-nova-regular mb-2 mt-2 xl:w-3/4 xl:text-xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc
+        o laboris nisi ut aliquip ex ea commodo consequat. consequat consequat consequat o laboris nisi ut aliquip ex ea commodo consequat consequat o laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <Button bc="border-beige" tc="text-beige" className="font-proxima-nova-bold">Learn more</Button>
+        </div>
+    </div >
 
   )
 }

@@ -21,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<News />} />
           <Route path="/about" element={<About />} />
+          <Route path="/article" element={<Article />} />
           <Route path="/events" element={<Events />} />
           <Route path="/services" element={<Services />} />
           <Route path="*" element={<div>404 not found</div>} />

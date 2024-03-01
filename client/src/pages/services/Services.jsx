@@ -10,6 +10,7 @@ export function Services() {
   const divStyle = {
     backgroundImage: `url(${bannerImg})`,
     backgroundSize: "cover",
+    backgroundPosition: "center"
   };
 
   const Services = [
@@ -120,18 +121,68 @@ export function Services() {
   return (
     <div className="bg-[#1F2029]">
       <div
-        className=" h-[500px] w-[100%] flex items-center justify-center "
+        className=" h-[550px] w-[100%] flex items-center justify-center "
         style={divStyle}
       >
-        <div className="border-4 border-[#2DA2DD] md:w-[40vw] flex justify-center items-center ">
-          <div className="ser:text-4xl text-[#E0DED2] text-5xl font-semibold p-4  ">
-            <span className="text-[#2DA2DD]">What </span> We do
+                <div
+          className="w-[100%] h-[100%] flex justify-center items-center md:text-center "
+          style={{ backgroundColor: "rgba(31, 32, 41, 0.8)" }}
+        >
+          <div
+            className="border  p-[1%] pl-4 pr-4 dlg:pr-[3%] dlg:pl-[3%] "
+            style={{
+              backgroundColor: "rgba(31, 32, 41, 0.8)",
+              borderColor: "#2DA2DD",
+              borderWidth: "4px",
+              zIndex: 1,
+              whiteSpace: "pre-line",
+            }}
+          >
+            <span
+              className="text-[65px] font-bold proxima-nova-extrabold xxs:text-[50px]"
+              style={{ color: "#2DA2DD" }}
+            >
+              W
+            </span>
+            <span
+              className="text-[65px]  font-bold proxima-nova-extrabold xxs:text-[50px]"
+              style={{ color: "#E0DED2" }}
+            >
+              hat&nbsp;
+            </span>
+
+            <span
+              className="text-[65px]  font-bold proxima-nova-extrabold xxs:text-[50px]"
+              style={{ color: "#2DA2DD" }}
+            >
+              W
+            </span>
+            <span
+              className="text-[65px]  font-bold proxima-nova-extrabold xxs:text-[50px]"
+              style={{ color: "#E0DED2" }}
+            >
+              e&nbsp;
+            </span>
+            <br className=" sm:hidden" />
+            <span
+              className="text-[65px]  font-bold proxima-nova-extrabold xxs:text-[50px] "
+              style={{ color: "#2DA2DD" }}
+            >
+              D
+            </span>
+            <span
+              className="text-[65px]  font-bold proxima-nova-extrabold xxs:text-[50px]"
+              style={{ color: "#E0DED2" }}
+            >
+              o
+            </span>
+            
           </div>
         </div>
       </div>
       {/*  done*/}
 
-      <div className="bg-[#E0DED2] lg:rounded-br-[300px]  sm:rounded-br-[250px] rounded-br-[150px] ser:rounded-br-[100px] pb-11">
+      <div className="bg-[#E0DED2] xxs:rounded-br-[80px] md:rounded-br-[150px] xl:rounded-br-[250px] pb-11">
         <div className=" flex flex-col p-4  items-center ">
           <div className="md:text-5xl text-4xl font-semibold text-[#1F2029]">
             <span className="text-[#2DA2DD]">Our&nbsp;</span>Services
@@ -156,7 +207,7 @@ export function Services() {
             parag={data[selectedParagraph]}
           />
 
-          <div className="service:hidden ">
+          <div className="xxs:hidden sm:block">
             {data.map((item, index) => (
               <div
                 className=" flex-col items-center justify-center gap-7 pl-10 pr-10 mt-10 "
@@ -170,7 +221,7 @@ export function Services() {
                     src={item.image}
                     style={{ objectFit: 'cover' }}
                     alt="Banner"
-                    className="sm:w-[450px] w-72 h-60 relative top-[20px] right-[30px]" />
+                    className="sm:w-[450px] w-72 h-60 relative top-[25px] right-[30px]" />
                 </div>
                 <div key={index} className="flex-col sm:w-[500px]">
                   <h2 className="pb-4 text-[#2DA2DD] font-bold ">
@@ -209,26 +260,26 @@ export function Services() {
       </div>
 
       {/* partie contact */}
-      <div className="bg-[#E0DED2] mt-24 pt-10 pb-16 lg:rounded-tl-[300px]  sm:rounded-tl-[250px] rounded-tl-[150px] ser:rounded-tl-[100px]" >
+      <div className="bg-[#E0DED2] mt-24 pt-10 pb-16 xxs:rounded-tl-[80px] md:rounded-tl-[150px] xl:rounded-tl-[250px]" >
         {/* titre */}
         <div className="flex flex-col items-center">
-          <div className="ser:mt-[20px] sm:text-5xl text-4xl  font-semibold text-[#1F2029]">
+          <div className="xxs:mt-[20px] sm:text-5xl text-4xl  font-semibold text-[#1F2029]">
             <span className="text-[#2DA2DD]">Dive </span>Deeper
           </div>
-          <h2 className="ser:text-lg text-xl  font-semibold text-[#1F2029] pt-1">
+          <h2 className="xxs:text-lg text-xl  font-semibold text-[#1F2029] pt-1">
             Discover the core of our service
           </h2>
         </div>
 
         {/* 2éme partie */}
 
-        <section className='flex flex-col justify-center font-Montserrat items-center bg-beige rounded-tl-[340px] h-fit gap-16 p-20'>
+        <section className=' xl:w-[90%] xl:ml-[5%] flex flex-col justify-center font-proxima-nova items-center bg-beige h-fit gap-16 p-4'>
           <div className='grid md:grid-cols-2 gap-2'>
             <div className='bg-dark-blue flex flex-col justify-center items-center gap-3 text-beige p-4 lg:p-8'><h1 className='text-3xl'>Our Portfolio</h1>
               <p className='opacity-90 text-center'>Discover the core of our services</p>
             </div>
 
-            <div className=' border-[3px] border-gradient-dark-blue flex justify-center items-center gap-5 p-8 font-medium md:row-start-2'>
+            <div className=' border-[3px] border-gradient-dark-blue flex justify-center items-center gap-5 px-8 font-medium md:row-start-2'>
             <DownloadButton />
             </div>
 
@@ -237,7 +288,7 @@ export function Services() {
               <p className='opacity-90 text-center'>Lorem ipsum dolor sit amet</p>
             </div>
 
-            <div className=' border-[3px] border-gradient-blue flex items-center justify-center gap-5 p-8 font-medium'>
+            <div className=' border-[3px] border-gradient-blue flex items-center justify-center gap-5 px-8 font-medium'>
               <ContactButton />
 
             </div>

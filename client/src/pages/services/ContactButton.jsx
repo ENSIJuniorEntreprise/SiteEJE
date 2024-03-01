@@ -8,7 +8,7 @@ const ContactButton = () => {
   };
 
   return (
-    <div className="w-[100vw] lg:w-96 h-24 flex items-center justify-center gap-6" >
+    <div className="w-[100%] lg:w-96 h-24 flex items-center justify-center gap-6" >
       <img src={mailIcon} className="w-12 h-12" alt="mail icon" />
       <div className="ser:text-base text-[#2DA2DD] font-semibold text-lg">
         Get in touch with us

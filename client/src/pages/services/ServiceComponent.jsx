@@ -68,7 +68,7 @@ const ServiceComponent = ({
 
   return (
     <div
-      className="ser:mx-6 ser:mb-0 lg:w-[350px] sm:w-full rounded-[7px] lg:flex lg:flex-col sm:grid sm:grid-cols-2 flex flex-col mx-12 sm:mx-0 px-0 sm:px-12 lg:px-0 gap-4 mt-[2rem] p-[.4rem]"
+      className="xxs:mx-6 xxs:mb-0 lg:w-[350px] sm:w-full rounded-[7px] lg:flex lg:flex-col sm:grid sm:grid-cols-2 flex flex-col mx-12 sm:mx-0 px-0 sm:px-12 lg:px-0 gap-4 mt-[2rem] p-[.4rem]"
       style={{ height: containerHeight, justifyContent: "center" }}
     >
       {paragraphs.map((paragraph, index) => (
@@ -93,12 +93,12 @@ const ServiceComponent = ({
           {selectedService === index && isSmall && (
             <div>
               <div className="pt-[30px] relative">
-                <div className="bg-[#2DA2DD] service:w-[90%] service:mr-[12px] w-72 h-60 absolute  sm:right-[-20px] right-[-10px] "></div>
+                <div className="bg-[#2DA2DD] xxs:w-[90%] xxs:h-[80%] w-72 h-60 absolute  sm:right-[-10px] right-[-5px] "></div>
                 <img
                   src={parag.image}
                   style={{ objectFit: "cover" }}
                   alt="Banner"
-                  className="service:w-[95%] w-72 h-60 relative top-[30px]"
+                  className="xxs:w-[95%] w-72 h-60 relative top-[20px]"
                 />
               </div>
               <div key={index} className="flex-col sm:w-[500px]">
