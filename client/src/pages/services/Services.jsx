@@ -129,7 +129,7 @@ export function Services() {
           style={{ backgroundColor: "rgba(31, 32, 41, 0.8)" }}
         >
           <div
-            className="border  p-[1%] pl-4 pr-4 dlg:pr-[3%] dlg:pl-[3%] "
+            className="border  p-[1%] pl-4 pr-4 dlg:pr-[3%] dlg:pl-[3%] w-[600px]"
             style={{
               backgroundColor: "rgba(31, 32, 41, 0.8)",
               borderColor: "#2DA2DD",

@@ -7,7 +7,7 @@ function Banner() {
   };
   return (
     <div className="bg-[#1F2029]">
-      <div className="relative w-[100%] flex items-center justify-center xl:h-[600px] lg:h-[400px] md:h-[400px] sm:h-[300px] yxs:h-[250px]">
+      <div className="relative w-[100%] flex items-center justify-center xl:h-[550px] lg:h-[400px] md:h-[400px] sm:h-[300px] yxs:h-[250px]">
         <div
           className="opacity-100"
           style={{
@@ -27,7 +27,7 @@ function Banner() {
           style={{ backgroundColor: "rgba(31, 32, 41, 0.8)" }}
         >
           <div
-            className="border  p-[1%] pl-4 pr-4 dlg:pr-[3%] dlg:pl-[3%] "
+            className="border  p-[1%] pl-4 pr-4 dlg:pr-[3%] dlg:pl-[3%] w-[600px]"
             style={{
               backgroundColor: "rgba(31, 32, 41, 0.8)",
               borderColor: "#2DA2DD",

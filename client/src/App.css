@@ -58,6 +58,13 @@
   backdrop-filter: blur(10px); 
 }
 
+.dark-blue-gradient1 {
+  background: linear-gradient(20deg, rgb(31, 32, 41) 52%, rgba(45, 162, 221, 0.134) 100%);
+  background-position: top;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px); 
+}
+
 
 .dropdown {
   position: absolute;

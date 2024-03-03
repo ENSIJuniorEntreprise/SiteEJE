@@ -58,6 +58,8 @@ function News(){
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 2,
+    draggable: true, 
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 900,
