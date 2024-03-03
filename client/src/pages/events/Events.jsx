@@ -22,7 +22,7 @@ const events = [
 
 
 function Events() {
-  const [currentSlide, setCurrentSlide] = useState(Math.floor(events.length));
+  const [currentSlide, setCurrentSlide] = useState( window.innerWidth>900 ? Math.floor(events.length)/2 + 1 : Math.floor(events.length)/2);
   const preloadImages = (currentSlide) => {
     const prevIndex = currentSlide === 0 ? events.length - 1 : currentSlide - 1;
     const nextIndex = currentSlide === events.length - 1 ? 0 : currentSlide + 1;
