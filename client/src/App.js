@@ -9,9 +9,13 @@ import { Contact } from "./pages/contact/Contact";
 import { About } from "./pages/about us/About";
 import Events from "./pages/events/Events";
 import { Services } from "./pages/services/Services";
+import { Login } from "./pages/login/Login";
+import Dash from "./pages/Dash";
 import { Article } from "./pages/news/Article/Article";
 import Loader from "./components/Loader";
 import "./App.css";
+import RequireAuth from "./RequireAuth";
+import PersistLogin from "./components/Persistlogin"
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -28,10 +32,16 @@ function App() {
       ) : (
         <div>
           <Router>
-          <Navbar />
+            <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/auth" element={<Login />} />
+              <Route element={<PersistLogin />}>
+                <Route element={<RequireAuth />}>
+                  <Route path="/dash" element={<Dash />} />
+                </Route>
+              </Route>
               <Route path="/news" element={<News />} />
               <Route path="/about" element={<About />} />
               <Route path="/article" element={<Article />} />
