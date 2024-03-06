@@ -31,7 +31,7 @@ const DashNav = ({setPage}) => {
     }
 
     return (
-        <nav className='absolute z-10 h-20 top-0 left-0 right-0 w-full text-[#e0ded2] font-semibold text-xl bg-[#1f212d] px-12 flex justify-between items-center'>
+        <nav className='z-[10000] fixed h-24 top-0 left-0 right-0 w-full text-[#e0ded2] font-semibold text-xl bg-[#1f212d] px-12 flex justify-between items-center'>
             <h1>welcome {userData.fullName}</h1>
             <ul className='flex items-center h-full'>
                 <li className='bg-[#1f212d] hover:bg-[#1f212dc9] h-full w-40'><button onClick={() => setPage("articles")} className='w-full h-full'>articles</button></li>

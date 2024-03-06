@@ -30,6 +30,8 @@ Create a .env file and set values
     * DB_URL= /* MongoDB URL */
     * EMAIL= /* gmail address */
     * PASSWORD=/* google app password*/
+    * ACCESS_TOKEN_SECRET= 
+    * REFRESH_TOKEN_SECRET=
 
 To get the google app password, follow the instructions provided in the following link:
 

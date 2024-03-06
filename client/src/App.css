@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
 
-
+body{
+  background-color: #1f2029;
+}
 .image-container{
   position: relative;
 }

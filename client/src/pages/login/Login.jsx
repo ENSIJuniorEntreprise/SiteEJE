@@ -13,8 +13,8 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const [info, setInfo] = useState({
-    username: "",
-    password: "",
+    username: "EJE@gmail.com",
+    password: "EJE",
   })
 
   const [remember, setRemember] = useState(false)
@@ -29,7 +29,7 @@ const Login = () => {
   const get = async () => {
     try {
       
-      const result = await axios.post('/auth/login',
+      const result = await axios.post('http://localhost:3000/auth/login',
         JSON.stringify({ username: info.username, password: info.password }),
         {
           headers: { 'Content-Type': 'application/json' },
