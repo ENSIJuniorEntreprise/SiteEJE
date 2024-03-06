@@ -14,7 +14,7 @@ export function RightArticle({
       className={`w-[70%] content-fit flex flex-col lg:gap-2 lg:flex  ${flexDirectionClass}`}
     >
       {/* Partie gauche (image) */}
-      <div className="h-[40vh] lg:h-[350px] xl:h-[400px] lg:w-auto flex-shrink-0 ">
+      <div className="h-[40vh] lg:h-[350px] xl:h-[350px] lg:w-[400px] flex-shrink-0 ">
         <img
           src={cover}
           alt="Description de l'image"
@@ -23,8 +23,8 @@ export function RightArticle({
       </div>
 
       {/* Partie droite (texte) */}
-      <div className="overflow-hidden w-full p-4 bg-[#E0DED3] lg:h-[350px] xl:h-[400px] md:h-[340px]">
-        <h2 className="title text-2xl font-semibold text-[#3D3E47] font-montserrat md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl  ">
+      <div className="overflow-hidden w-full p-4 bg-[#E0DED3] lg:h-[350px] xl:h-[350px] md:h-[340px]">
+        <h2 className="title text-2xl font-semibold text-[#3D3E47] font-proxima-nova-regular md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl mt-3 ">
           {title}
         </h2>
         <div className="bg-[#2DA2DD] h-1 w-[150px] mb-4"></div>
@@ -32,7 +32,7 @@ export function RightArticle({
           <span>{publishedAt}</span>
         </div>
         <br />
-        <p className="description text-[#1F2029] font-montserrat lg:text-lg md:text-xl xl:text-xl 2xl:text-2xl">
+        <p className="description text-[#1F2029] font-montserrat lg:text-lg md:text-xl xl:text-xl 2xl:text-2xl" style={{ maxHeight: "calc(1.5em * 4)", overflow: "hidden", display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 4 }}>
           {shortDescription}
         </p>
         <br />

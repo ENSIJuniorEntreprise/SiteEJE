@@ -39,19 +39,21 @@ const Timeline = () => {
       </div>
 
       <div className='xxs:p-1 mxms:pr-9 mxms:pl-9 sm:px-24 md:px-5 md:py-12 h-full w-full flex flex-col gap-2 justify-center items-center font-proxima-nova  xl:p-20'>
-        <div className={`xxs:p-5 xxs:rounded-tr-[50px] md:rounded-tr-[150px] bg-dark-blue h-fit rounded-tr-full w-[90%] flex items-center gap-5 md:p-10 align-items-center ${animate ? 'slide-in-left' : ''}`}>
-          <div className='xxs:w-[200px] w-[20%] flex justify-center'>
-            <img src={logoJET1} className='xxs:w-[70%] md:w-[70%]' alt="Logo JET"/>
+        
+      <div className={`xxs:p-5 xxs:rounded-tr-[50px] md:rounded-tr-[150px] rounded-tr-full bg-dark-blue h-fit w-[90%] flex items-center gap-4 md:p-10 align-items-center ${animate ? 'slide-in-left' : ''}`}>
+          <div className='xxs:w-[200px] w-[20%] flex justify-center'> 
+            <img src={award} className='xxs:w-[100%]  md:w-[100%]' alt="Award"/>
           </div>
           <div className='w-[5px] h-[120px] bg-light-blue'></div>
-
-          <div className='xxs:gap-0 flex flex-col xl:gap-3 w-[80%]'> 
+          <div className='xxs:gap-0 xxs:w-[80%] flex flex-col xl:gap-3'> 
             <h1 className='text-light-blue font-bold text-3xl'>
-              2011
+              2020
             </h1>
-            <p className='xxs:text-xl text-beige font-proxima-nova-regular xl:text-3xl'>Cofounding JET</p>
+            <p className='xxs:text-xl text-beige font-proxima-nova-regular xl:text-3xl'>Winning the award of excellence</p>
           </div>
         </div>
+
+       
 
         <div className={`xxs:p-5 bg-dark-blue h-fit w-[90%] flex items-center gap-4 md:p-10 align-items-center ${animate ? 'slide-in-left1' : ''}`}>
           <div className='xxs:w-[200px] w-[20%] flex justify-center'>
@@ -67,18 +69,20 @@ const Timeline = () => {
           </div>
         </div>
 
-        <div className={`xxs:p-5 bg-dark-blue h-fit w-[90%] flex items-center gap-4 md:p-10 align-items-center ${animate ? 'slide-in-left2' : ''}`}>
-          <div className='xxs:w-[200px] w-[20%] flex justify-center'> 
-            <img src={award} className='xxs:w-[100%]  md:w-[100%]' alt="Award"/>
+        <div className={`xxs:p-5  bg-dark-blue h-fit w-[90%] flex items-center gap-5 md:p-10 align-items-center ${animate ? 'slide-in-left2' : ''}`}>
+          <div className='xxs:w-[200px] w-[20%] flex justify-center'>
+            <img src={logoJET1} className='xxs:w-[70%] md:w-[70%]' alt="Logo JET"/>
           </div>
           <div className='w-[5px] h-[120px] bg-light-blue'></div>
-          <div className='xxs:gap-0 xxs:w-[80%] flex flex-col xl:gap-3'> 
+
+          <div className='xxs:gap-0 flex flex-col xl:gap-3 w-[80%]'> 
             <h1 className='text-light-blue font-bold text-3xl'>
-              2020
+              2011
             </h1>
-            <p className='xxs:text-xl text-beige font-proxima-nova-regular xl:text-3xl'>Winning the award of excellence</p>
+            <p className='xxs:text-xl text-beige font-proxima-nova-regular xl:text-3xl'>Cofounding JET</p>
           </div>
         </div>
+
       </div>
     </section>
   );

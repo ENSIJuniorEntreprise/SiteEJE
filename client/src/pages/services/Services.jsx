@@ -247,7 +247,7 @@ export function Services() {
             Testimonials
           </div>
         </div>
-        <div className=" sm:grid justify-center mt-20 gap-20 sm:grid-cols-2 flex flex-col px-5">
+        <div className=" sm:grid justify-center mt-20 gap-20 xl:gap-x-44 xl:gap-y-16 sm:grid-cols-2 flex flex-col px-5">
           {testemonieParts.map((part, index) => (
             <Testemonie
               key={index}

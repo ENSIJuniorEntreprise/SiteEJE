@@ -4,20 +4,13 @@ import CountUp from 'react-countup';
 
 function Number(props) {
   const { number, title } = props;
-  const { ref, inView } = useInView();
-  const visibleOnce = useRef(false);
-  const [displayCount, setDisplayCount] = useState(false); // Commencez par false
+  const { ref, inView } = useInView({ triggerOnce: true }); 
+  const [displayCount, setDisplayCount] = useState(false);
 
   useEffect(() => {
     if (inView) {
-      // Marquez la visibilité une fois qu'elle est dans la vue
-      visibleOnce.current = true;
-    }
-    if (visibleOnce.current) {
-      // Si c'est visible et que c'est la première fois
       setTimeout(() => {
-        // Délai pour commencer le comptage
-        setDisplayCount(true); // Mettez le comptage à true
+        setDisplayCount(true);
       }, 100);
     }
   }, [inView]);

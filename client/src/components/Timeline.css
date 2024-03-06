@@ -10,13 +10,13 @@
   }
   
   .slide-in-left {
-    animation: slideInLeft 1s ease forwards;
+    animation: slideInLeft 2s ease forwards;
   }
 
   .slide-in-left1 {
-    animation: slideInLeft 2s ease forwards;
+    animation: slideInLeft 3s ease forwards;
   }
   
   .slide-in-left2 {
-    animation: slideInLeft 3s ease forwards;
+    animation: slideInLeft 4s ease forwards;
   }

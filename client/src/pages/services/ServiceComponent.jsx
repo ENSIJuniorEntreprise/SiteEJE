@@ -73,13 +73,17 @@ const ServiceComponent = ({
     >
       {paragraphs.map((paragraph, index) => (
         <div className="flex flex-col" key={index}>
+
           <p
             key={index}
             style={pStyle}
             onClick={() => handleClick(index)}
             onMouseOver={onHover}
             onMouseOut={onHoverOut}
+            
           >
+          <div className="w-full h-full" style={{backgroundColor: "rgba(31, 32, 41, 0.85)"}}>
+
             <span
               style={{
                 ...spanStyle,
@@ -89,6 +93,8 @@ const ServiceComponent = ({
             >
               {paragraph.text}
             </span>
+            </div>
+
           </p>
           {selectedService === index && isSmall && (
             <div>

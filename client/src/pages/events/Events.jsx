@@ -6,14 +6,16 @@ import Rectangle from './../../assets/ENSIJE.jpg'
 import Card from './components/Card.jsx'
 import ArchiveCard from './components/ArchiveCard.jsx'
 import hackprise from "./../../assets/Rectangle 3.png";
+import get from "./../../assets/get.JPG";
+import Modal from './components/Modal.jsx'; 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
 
 const events = [
-  { id: 1, date: "23/24", month: "June", title1: "Hack'prise", title2: "2.0", description: "Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise", image: hackprise },
-  { id: 2, date: "23/24", month: "June", title1: "Hack'prise", title2: "3.0", description: "Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise", image: hackprise },
-  { id: 3, date: "23/24", month: "June", title1: "Hack'prise", title2: "4.0", description: "Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise", image: hackprise },
+  { id: 1, date: "23/24", month: "June", title1: "Hack'prise", title2: "2.0", description: "Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise", image: get },
+  { id: 2, date: "23/24", month: "June", title1: "Get", title2: "Entrepreneurial", description: "Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise", image: get },
+  { id: 3, date: "23/24", month: "June", title1: "Anniversaire", title2: "17th", description: "Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise", image: hackprise },
   { id: 4, date: "23/24", month: "June", title1: "Hack'prise", title2: "5.0", description: "Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise", image: hackprise },
   { id: 5, date: "23/24", month: "June", title1: "Hack'prise", title2: "6.0", description: "Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise", image: hackprise },
   { id: 6, date: "23/24", month: "June", title1: "Hack'prise", title2: "7.0", description: "Our recent was a resounding success! On Saturday, April 15, 2023, Riverside Park transformed into a music lover's paradise", image: hackprise },
@@ -23,15 +25,8 @@ const events = [
 
 function Events() {
   const [currentSlide, setCurrentSlide] = useState( window.innerWidth>900 ? Math.floor(events.length)/2 + 1 : Math.floor(events.length)/2);
-  const preloadImages = (currentSlide) => {
-    const prevIndex = currentSlide === 0 ? events.length - 1 : currentSlide - 1;
-    const nextIndex = currentSlide === events.length - 1 ? 0 : currentSlide + 1;
-    const imagesToPreload = [events[prevIndex].image, events[nextIndex].image];
-    imagesToPreload.forEach((imageSrc) => {
-      const img = new Image();
-      img.src = imageSrc;
-    });
-  };
+  const [showModal, setShowModal] = useState(false); // State for managing modal visibility
+
   const settings = {
     dots: true,
     infinite: true,
@@ -41,14 +36,15 @@ function Events() {
     draggable: true,
     swipeToSlide: true,
     initialSlide: Math.floor(events.length / 2),
+    
     responsive: [
       {
         breakpoint: 900,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '25%',
+          // centerMode: true,
+          // centerPadding: '25%',
         },
       },
     ],
@@ -67,7 +63,26 @@ function Events() {
 
       }
       },
-  };
+      appendDots: dots => (
+        <div>
+          <ul style={{ display: "flex", justifyContent: "center", listStyle: "none", padding: 0 }}>
+            {dots.map((dot, index) => (
+              <li key={index} style={{ margin: "0 5px" }}>
+                <button style={{
+                  width: "12px",
+                  height: "12px",
+                  backgroundColor: dot.props.className.includes("slick-active") ? "#2DA2DD" : "#e0ded2",
+                  border: "none",
+                  borderRadius: "50%",
+                  cursor: "pointer"
+                }} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+      
+              }    
   return (
     <div>
       <section className="flex items-center justify-center bg-cover bg-center h-[550px]" style={{ backgroundImage: `url(${Rectangle})` }}>
@@ -105,7 +120,7 @@ function Events() {
         </div>
       </section>
       <section className="bg-[#1f212d]">
-        <div className=' items-center bg-[#e0ded2] pb-12 shadow-cardShadow md:rounded-bl-[150px] xl:rounded-bl-[250px]'>
+        <div className=' items-center bg-[#e0ded2] pb-12 shadow-cardShadow xxs:rounded-bl-[80px] md:rounded-bl-[150px] xl:rounded-bl-[250px]'>
           <p className='font-proxima-nova-bold pt-12 text-center text-2xl sm:text-4xl md:text-6xl text-[#2da2dd] font-bold tracking-wide'>Newest
             <span className='font-proxima-nova-bold text-2xl sm:text-4xl md:text-6xl text-[#1f212d] font-bold ml-3 md:ml-5'>Events</span></p>
           <p className='text-[#1f212d] text-xs md:text-xl pb-4 px-4 text-center md:pb-10 text-medium font-proxima-nova'>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
@@ -167,10 +182,10 @@ function Events() {
           <p className='font-Montserrat text-2xl sm:text-4xl md:text-6xl text-[#2da2dd] font-bold tracking-wide'>Event</p>
           <p className='font-Montserrat text-2xl sm:text-4xl md:text-6xl text-[#e0ded2] font-bold ml-2 md:ml-5'>Archive</p>
         </span>
-        <div className='w-[90%] pb-24'>
-          <SlickSlider {...settings} beforeChange={(oldIndex, newIndex) => setCurrentSlide(newIndex)}>
+        <div className='xxs:w-[80%] xxs:pb-16 w-[90%]  pb-24 carousel-container'>
+          <SlickSlider {...settings} beforeChange={(oldIndex, newIndex) => setCurrentSlide(newIndex)} className="mx-[1%]">
             {events.map((event, index) => (
-              <div key={event.id} className="w-[90%] ml-[2.5%]">
+              <div key={event.id} className="w-[90%] mr-[2.5%] xxs:mb-5 mb-10 ">
                 <ArchiveCard
                   date={event.date}
                   month={event.month}
@@ -179,12 +194,19 @@ function Events() {
                   description={event.description}
                   image={event.image}
                   isActive={index === currentSlide}
+                  setShowModal={setShowModal} 
                   />
               </div>
             ))}
           </SlickSlider>
         </div>
-      </section>
+      </section> 
+      {showModal && (
+        <Modal
+          event={events[currentSlide]} 
+          onClose={() => setShowModal(false)}
+        />
+      )}
 
 
 
@@ -192,12 +214,12 @@ function Events() {
 
 
       <section className="bg-[#1f212d]">
-        <div className='flex flex-col bg-[#e0ded2] items-center md:rounded-tr-[150px] xl:rounded-tr-[250px]'>
-          <p className='font-Montserrat text-2xl sm:text-4xl md:text-6xl text-[#2da2dd] font-bold tracking-wide pt-44'>Gallery</p>
-          <p className='text-[#1f212d] text-xs md:text-xl pb-10 text-medium font-Montserrat text-center w-72'>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-          <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
-            <div class="-m-1 flex flex-wrap md:-m-2">
-              <div class="flex w-1/2 flex-wrap">
+        <div className='flex flex-col bg-[#e0ded2] items-center xxs:rounded-tr-[80px] md:rounded-tr-[150px] xl:rounded-tr-[250px]'>
+          <p className='font-Montserrat text-2xl sm:text-4xl md:text-6xl text-[#2da2dd] font-bold tracking-wide pt-10'>Gallery</p>
+          <p className='text-[#1f212d] text-xs md:text-xl pb-10 text-medium font-Montserrat text-center '>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+          <div class="container mx-auto xs:px-5 mmmxs:px-5 py-2 lg:px-10 lg:pt-5 lg:pb-16">
+            <div class="xxs:flex-col md:flex-row justify-center items-center flex flex-wrap md:m-2">
+              <div class="flex xxs:w-[100%] md:w-1/2 flex-wrap">
                 <div class="w-1/2 p-1 md:p-2">
                   <img
                     alt="gallery"
@@ -217,7 +239,7 @@ function Events() {
                     src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
                 </div>
               </div>
-              <div class="flex w-1/2 flex-wrap">
+              <div class="flex xxs:w-[100%] md:w-1/2 flex-wrap">
                 <div class="w-full p-1 md:p-2">
                   <img
                     alt="gallery"

@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import image from "./../assets/team.png";
 import Button from './Button';
 import blueDown from './../assets/blue-down.png'
+import "./Animation.css"
 
 function Carousel() {
   const secondSectionRef = useRef(null);
@@ -56,14 +57,14 @@ function Carousel() {
     <section className='w-full h-full carousel-container relative'>
       <div>
         <div className="text-center w-[88%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-          <div className='font-bold text-beige font-gilroy-extrabold xxs:text-5xl xxxs:text-6xl text-[4em] leading-tight md:text-left md:text-8xl lg:text-[7em] xl:text-[8em] xl:w-4/6 '>
+          <div className='font-bold text-beige font-gilroy-extrabold xxs:text-5xl xxxs:text-6xl text-[4em] leading-tight md:text-left md:text-8xl lg:text-[7em] xl:text-[8em] xl:w-4/6 title-animation'>
             <span className='text-light-blue font-gilroy-extrabold'>ENSI</span> Junior Enterprise
           </div>
           <div className='flex gap-4 mt-10 flex-col md:flex-row'>
-            <Button bc='border-none' tc='text-dark-blue' bgc='bg-beige' className= 'font-proxima-nova font-bold group-hover:text-beige group-hover:border-beige group-hover:bg-transparent group-hover:cursor-pointer hover:ease-in'>
+            <Button bc='border-none' tc='text-dark-blue' bgc='bg-beige' className= 'font-proxima-nova font-bold group-hover:text-beige group-hover:border-beige btn-4 cursor-pointer hover:ease-in hover-effect button-animation'>
               Submit a request for proposal
             </Button>
-            <Button bc='border-black' tc='text-beige' bgc='bg-blue-400' className='font-proxima-nova font-bold group-hover:bg-beige group-hover:text-dark-blue '>Download our brochure </Button>
+            <Button bc='border-beige' tc='text-beige' bgc='bg-blue-400' className='font-proxima-nova font-bold cursor-pointer  button-animation btn-5' >Download our brochure </Button>
           </div>
         </div>
         <Slider {...settings}>

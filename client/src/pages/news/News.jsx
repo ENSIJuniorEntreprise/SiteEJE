@@ -1,5 +1,6 @@
 import { RightArticle } from "./RightArticle";
 import { bannerImg,image } from "../../assets/file";
+import team from "./../../assets/getE.jpg"
 import Button from "./Button";
 import Search from "./Search";
 import FirstHighlight from "./FirstHighlight";
@@ -7,7 +8,7 @@ import Banner from "./Banner";
 import { useState } from "react";
 export function News() {
   let article0 = {
-    cover: `${image}`,
+    cover: `${team}`,
     publishedAt: "August 30, 2020",
     title: "Lorem ipsum dolor",
     shortDescription:
