@@ -58,7 +58,7 @@
   
   .btn-5:hover {
     border: 1px solid;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.904), 0 0 20px rgba(255, 255, 255, 0.749);
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
     text-shadow: 1px 1px 2px #427388; 
@@ -71,14 +71,14 @@
     outline-color: rgba(255, 255, 255, .5);
     outline-offset: 0px;
     text-shadow: none;
-    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
   }
   
   .btn-4:hover {
     border: 1px solid;
-    box-shadow: inset 0 0 15px rgba(255, 255, 255, .5), 0 0 15px rgba(255, 255, 255, .2);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.9);
     outline-color: rgba(255, 255, 255, 0.041);
-    outline-offset: 15px;
+    outline-offset: 10px;
   }
   
 

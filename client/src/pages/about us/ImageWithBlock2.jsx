@@ -63,7 +63,7 @@ const ImageWithBlock = ({ imagePath, altText, poste }) => {
     <div
       ref={targetRef}
       className={
-        "cont flex flex-col justify-center relative  cursor-pointer xxs:h-[300px] xxs:w-[230px] mmmxs:h-[250px] mmmxs:w-[190px] xsm:h-[300px] xsm:w-[230px]  mx-auto "
+        "cont flex flex-col justify-center relative  cursor-pointer xxs:h-[300px] xxs:w-[220px] xs:w-[270px] xs:h-[380px] mmmxs:h-[250px] mmmxs:w-[190px] xsm:h-[300px] xsm:w-[230px]  mx-auto "
       }
       style={{
         borderColor: "#1F2029",
@@ -76,7 +76,7 @@ const ImageWithBlock = ({ imagePath, altText, poste }) => {
     >
       {image && (
         <img
-          className="w-[100%] h-[100%] object-cover absolute mx-auto "
+          className="w-[100%] h-[100%] ml-[3%] object-cover absolute mx-auto "
           src={image}
           alt={altText}
           style={{
@@ -91,7 +91,7 @@ const ImageWithBlock = ({ imagePath, altText, poste }) => {
       )}
       {showInnerBlock && (
         <div
-          className="flex flex-col justify-center items-center text-center absolute w-[90%] h-[90%]"
+          className="flex flex-col justify-center items-center text-center absolute w-[90%] ml-[5%] h-[90%]"
           style={{
             opacity: 1,
             transition: "opacity 0.7s, transform 0.7s",

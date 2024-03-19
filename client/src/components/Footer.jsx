@@ -24,7 +24,7 @@ function Footer() {
               <h2 className="mb-6 text-xl hover:text-[#2DA2DD] font-photograph text-[#2DA2DD] uppercase flex-start">Pages</h2>
               <ul className="text-gray-500 font-medium flex-start grid grid-cols-2 sm:grid-cols-1">
                 <li>
-                  <a href="#" className="sm:text-base lg:text-xl hover:underline text-[#F1EFE2] font-photograph  text-xl hover:text-[#2DA2DD]">Acceuil</a>
+                  <a href="#" className="sm:text-base lg:text-xl hover:underline text-[#F1EFE2] font-photograph  text-xl hover:text-[#2DA2DD]">Home</a>
                 </li>
                 <li>
                   <a href="#" className="sm:text-base lg:text-xl hover:underline text-[#F1EFE2] font-photograph  text-xl hover:text-[#2DA2DD]">About us</a>

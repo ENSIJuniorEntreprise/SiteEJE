@@ -14,9 +14,8 @@ function Navbar() {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top when route changes
-  }, [location.pathname]); // Trigger effect when pathname changes
-
+    window.scrollTo(0, 0); 
+  }, [location.pathname]); 
   return (
     <nav style={{ backgroundColor: 'rgba(31, 32, 41, 0.8)', zIndex: '500', position: 'fixed', width: '100%' }} className="md:h-25">
       <div className="navbar-corner"></div>

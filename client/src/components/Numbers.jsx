@@ -18,13 +18,13 @@ function Number(props) {
   return (
     <div className='flex flex-col gap-2 items-center justify-center z-50' ref={ref}>
       {displayCount ? (
-        <div className='font-bold font-gilroy-extrabold text-beige text-7xl'>
+        <div className='font-bold font-gilroy-extrabold text-beige xxs:text-5xl xs:text-7xl'>
           +<CountUp end={number} duration={5} />
         </div>
       ) : (
         <div className='font-bold font-gilroy-extrabold text-beige text-7xl'>+{number}</div>
       )}
-      <div className='w-2/3 h-[3px] mt-5 mb-5 bg-beige'></div>
+      <div className='w-2/3 h-[3px] xxs:mt-0 xxs:mb-0 xs:mt-5 xs:mb-5 bg-beige'></div>
       <div className='text-light-blue whitespace-nowrap font-proxima-nova-bold text-3xl'>{title}</div>
     </div>
   );

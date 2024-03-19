@@ -182,7 +182,7 @@ export function About() {
         </div>
       </div>
       <div
-        className="w-full md:flex flex-col items-center justify-center p-12 mt-6 shadow xxs:rounded-tl-[180px] xxs:pb-[100px] sm:rounded-tl-[180px] md:rounded-tl-[240px] dlg:rounded-tl-[260px] dxl:rounded-tl-[270px]  "
+        className="w-full md:flex flex-col items-center justify-center xxs:p-0 xs:p-12 mt-6 shadow xxs:rounded-tl-[180px] xxs:pb-[100px] sm:rounded-tl-[180px] md:rounded-tl-[240px] dlg:rounded-tl-[260px] dxl:rounded-tl-[270px]  "
         style={{ background: "#E0DED2" }}
       >
         <div className="text-center">

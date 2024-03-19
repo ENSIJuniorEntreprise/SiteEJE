@@ -81,7 +81,7 @@ const Login = () => {
   };
 
   return (
-    <div className='h-screen w-screen flex justify-center items-center flex-col'>
+    <div className='h-ful pt-44 pb-12 w-full flex justify-center bg-beige items-center flex-col'>
       <form onSubmit={handleSubmit} className='flex flex-col justify-center items-start text-lg gap-4 p-10 rounded-md border-2'>
       <h1 className='text-4xl font-semibold text-color5 mx-auto'>Log in</h1>
       <p className={errMsg ? 'text-red-500' : "hidden"} aria-live="assertive">{errMsg}</p>
@@ -93,7 +93,7 @@ const Login = () => {
           <input type="checkbox" name="notify" onChange={() => setRemember(!remember)} checked={remember} />
           <label htmlFor="notify">Send me promotional emails/notifications</label>
         </div>
-        <button type="submit" className='flex justify-center items-center text-white bg-blue-500 hover:bg-color6 w-96 h-11 rounded-md cursor-pointer'>Log in</button>
+        <button type="submit" className='flex justify-center items-center text-white bg-blue-500 bg-dark-blue hover:bg-light-blue w-96 h-11 rounded-md cursor-pointer'>Log in</button>
         <span>Don't have an account? <Link to="/signup" className='hover:underline'>Sign up</Link></span>
       </form>
     </div>

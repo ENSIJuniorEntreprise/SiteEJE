@@ -22,11 +22,9 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // Simulate loading time
     setTimeout(() => setLoading(false), 3500);
   }, []);
 
-  // Function to determine whether to show navbar, newsletter, and footer
   const showNavbarNewsletterFooter = () => {
     return location.pathname !== "/dash";
   };
