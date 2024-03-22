@@ -56,7 +56,7 @@ async function findAllAdmins(req, res) {
     const admins = await Admin.find();
     if (admins !== null) {
       const updatedAdmins = admins.map((admin) => admin.toObject());
-      
+
       return updatedAdmins;
     } else {
       return null;
@@ -77,7 +77,7 @@ async function getAccounts(req, res) {
           fullName: admin.fullName
         };
       });
-      
+
       return res.status(200).json(updatedAdmins);
 
     } else {
@@ -92,6 +92,11 @@ async function getAccounts(req, res) {
 
 const signup = async (req, res) => {
   try {
+    const cookies = req.cookies;
+    const refreshToken = cookies.jwt;
+    if (!refreshToken) {
+      return res.status(401).json({ message: 'Unauthorized' });
+    }
     const { fullName, username, password } = req.body;
     const existingAdmin = await Admin.findOne({ username });
     if (existingAdmin) {
